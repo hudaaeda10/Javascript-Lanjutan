@@ -44,7 +44,52 @@
 // console.log(jumlahHuruf);
 
 // Studi kasus mengembalikann nilai objek pada arrow funtion =======================================
-let mahasiswa = ['Itsuki', 'Miku', 'Mitsuba'];
-let jumlahHuruf = mahasiswa.map(nama => ({nama: nama, jmlHuruf: nama.length}));
-// console.log(jumlahHuruf);
-console.table(jumlahHuruf);
+// let mahasiswa = ['Itsuki', 'Miku', 'Mitsuba'];
+// let jumlahHuruf = mahasiswa.map(nama => ({nama: nama, jmlHuruf: nama.length}));
+// // console.log(jumlahHuruf);
+// console.table(jumlahHuruf);
+
+
+
+// melakukan this pada arrow function =================================================================
+// constructor function
+// let Mahasiswa = function(){
+//     this.nama = 'Kana Hanazawa',
+//     this.umur = 22,
+//     this.sayHello = function(){
+//         console.log(`Halo nama saya ${this.nama}, saya berumur ${this.umur} tahun`);
+//     } 
+// }
+// const mahasiswa1 = new Mahasiswa();
+
+// ====================================================================
+//  pada penggunaan arrow function tidak dapat menggunakan this dalam mendeklarasikan function expression tetapi dengan function literation dapat mengguankan this
+
+// let Mahasiswa = function(){
+//         this.nama = 'Kana Hanazawa',
+//         this.umur = 22,
+//         this.sayHello = function(){
+//             console.log(`Halo nama saya ${this.nama}, saya berumur ${this.umur} tahun`);
+//         } 
+//         setInterval(() => {
+//             console.log(this.umur++); // menggunakan function literation dapat menggunakan this
+//         }, 500);
+//     }
+//     const mahasiswa1 = new Mahasiswa();
+
+
+// Studi kasus melakukan perubahan pada sebuah kotak ketika di click 
+const box = document.querySelector('.box');
+box.addEventListener('click', function(){
+    let satu = 'size';
+    let dua = 'caption';
+
+    if (this.classList.contains(satu)){
+        [satu, dua] = [dua, satu];
+    }
+
+    this.classList.toggle(satu);
+    setTimeout( () => {
+        this.classList.toggle(dua); 
+    }, 600);
+})
