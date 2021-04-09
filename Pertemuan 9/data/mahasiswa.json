@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "Kana Hanazawa",
+        "nrp": "0110219381",
+        "email": "kana@gmail.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 1
+    },
+    {
+        "nama": "Horimiya",
+        "nrp": "01102193141",
+        "email": "horimiya@gmail.com",
+        "jurusan": "Teknik Industri",
+        "idDosenWali": 1
+    },
+    {
+        "nama": "Eren Yaeger",
+        "nrp": "0110219312",
+        "email": "eren@gmail.com",
+        "jurusan": "Teknik Perkapalan",
+        "idDosenWali": 2
+    }
+]
